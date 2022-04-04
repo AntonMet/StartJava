@@ -25,7 +25,7 @@ class IfElseStatementTheme {
         } else if (firstLetterOfName == 'I') {
             System.out.println("Первая буква имени I");
         } else {
-                System.out.println("Первая буква имени не M и не I" + "\n");
+            System.out.println("Первая буква имени не M и не I" + "\n");
         }
 
         //Поиск максимального и минимального числа
