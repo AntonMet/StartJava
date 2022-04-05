@@ -3,22 +3,22 @@ class IfElseStatementTheme {
         //Перевод псевдокода на язык Java
         System.out.println("Перевод псевдокода на язык Java");
         byte age = 25;
-        boolean male = false;
-        float growth = 1.9f;
-        String name = "Jack";
         if (age > 20) {
             System.out.println("Возраст больше 20");
         } else {
             System.out.println("Возраст меньше либо равен 20");
         }
+        boolean male = false;
         if (!male) {
             System.out.println("Пол женский");
         }
-        if (growth < 1.8) {
+        float height = 1.9f;
+        if (height < 1.8) {
             System.out.println("Рост меньше 1,80");
         } else {
             System.out.println("Рост больше либо равен 1,8");
         }
+        String name = "Jack";
         char firstLetterOfName = name.charAt(0);
         if (firstLetterOfName == 'M') {
             System.out.println("Первая буква имени М");
@@ -40,79 +40,69 @@ class IfElseStatementTheme {
 
         //Работа с числом
         System.out.println("Работа с числом");
-        int number3 = -21;
-        if (number3 == 0) {
+        number1 = 22;
+        if (number1 != 0) {
+            if (number1 > 0) {
+                System.out.println(number1 + " положительное");
+            } else {
+                System.out.println(number1 + " отрицательное");
+            }
+            if (number1 % 2 == 0) {
+                System.out.println(number1 + " четное число" + "\n");
+            } else {
+                System.out.println(number1 + " нечётное число" + "\n");
+            }
+        } else {
             System.out.println("Введён ноль" + "\n");
-        }
-        if (number3 > 0 & number3 != 0) {
-            System.out.println(number3 + " положительное");
-        } else if (number3 != 0) {
-            System.out.println(number3 + " отрицательное");
-        }
-        if (number3 % 2 == 0 & number3 != 0) {
-            System.out.println(number3 + " четное число");
-        } else if (number3 != 0) {
-            System.out.println(number3 + " нечётное число" + "\n");
         }
 
         //Поиск общей цифры в числах
         System.out.println("Поиск общей цифры в числах");
-        int number4 = 759;
-        int number5 = 959;
-        if (number4 / 100 == number5 / 100) {
-            System.out.println("В первом разряде одинковая цифра " + (number4 / 100));
+        number1 = 759;
+        number2 = 959;
+        if (number1 / 100 == number2 / 100) {
+            System.out.println("В первом разряде одинковая цифра " + (number1 / 100));
         }
-        if ((number4 % 100) / 10 == (number5 % 100) / 10) {
-            System.out.println("Во втором разряде одинковая цифра " + ((number5 % 100) / 10));
+        if ((number1 % 100) / 10 == (number2 % 100) / 10) {
+            System.out.println("Во втором разряде одинковая цифра " + ((number2 % 100) / 10));
         }
-        if (number4 % 10 == number5 % 10) {
-            System.out.println("В третьем разряде одинковая цифра " + (number4 % 10) + "\n");
+        if (number1 % 10 == number2 % 10) {
+            System.out.println("В третьем разряде одинковая цифра " + (number1 % 10) + "\n");
         }
 
         //Определение буквы, числа или символа по их коду
         System.out.println("Определение буквы, числа или символа по их коду");
         char unknownChar = '\u005A';
-        if (unknownChar <= '\u0030') {
+        if (unknownChar <= '\u0030' | (unknownChar > '\u0039' & unknownChar < '\u0041') | (unknownChar > '\u005A' & unknownChar < '\u0061') | (unknownChar > '\u007A')) {
             System.out.println(unknownChar + " не буква и не цифра" + "\n");
         }
         if (unknownChar > '\u002F' & unknownChar < '\u003A') {
             System.out.println(unknownChar + " цифра");
         }
-        if (unknownChar > '\u0039' & unknownChar < '\u0041') {
-            System.out.println(unknownChar + " не буква и не цифра" + "\n");
-        }
         if (unknownChar > '\u0040' & unknownChar < '\u005B') {
             System.out.println(unknownChar + " заглавная буква" + "\n");
         }
-        if (unknownChar > '\u005A' & unknownChar < '\u0061') {
-            System.out.println(unknownChar + " не буква и не цифра" + "\n");
-        }
         if (unknownChar > '\u0060' & unknownChar < '\u007B') {
             System.out.println(unknownChar + " строчная буква" + "\n");
-        }
-        if (unknownChar > '\u007A') {
-            System.out.println(unknownChar + " не буква и не цифра" + "\n");
         }
 
         //Определение суммы вклада и начисленных банком %
         System.out.println("Определение суммы вклада и начисленных банком %");
         double deposit = 300000;
+        double ratio;
         if (deposit < 100000) {
-            System.out.println("Сумма вклада: " + deposit + ". Начисленный процент: " + deposit * 0.05 + "%. Итоговая сумма: " + deposit * 1.05 + "\n");
+            ratio = 0.05;
+        } else if (deposit >= 300000) {
+            ratio = 0.1;
+        } else {
+            ratio = 0.07;
         }
-        if (deposit >= 100000 & deposit < 300000) {
-            System.out.println("Сумма вклада: " + deposit + ". Начисленный процент: " + deposit * 0.07 + "%. Итоговая сумма: " + deposit * 1.07 + "\n");
-        }
-        if (deposit >= 300000) {
-            System.out.println("Сумма вклада: " + deposit + ". Начисленный процент: " + deposit * 0.1 + "%. Итоговая сумма: " + deposit * 1.1 + "\n");
-        }
+        System.out.println("Сумма вклада: " + deposit + ". Начисленный процент: " + deposit * ratio + "%. Итоговая сумма: " + deposit * (1 + ratio) + "\n");
 
         //Определение оценки по предметам
         System.out.println("Определение оценки по предметам");
         int historyPercent = 59;
-        int programmingPercent = 91;
         int historyRating;
-        int programmingRating;
         if (historyPercent <= 60) {
             historyRating = 2;
         } else if (historyPercent < 73) {
@@ -122,6 +112,8 @@ class IfElseStatementTheme {
         } else {
             historyRating = 5;
         }
+        int programmingPercent = 91;
+        int programmingRating;
         if (programmingPercent <= 60) {
             programmingRating = 2;
         } else if (programmingPercent < 73) {
@@ -152,18 +144,27 @@ class IfElseStatementTheme {
         int sideA = 3;
         int sideB = 4;
         int sideC = 5;
+        int hypotenuse = 0;
+        int firstLeg = 0;
+        int secondLeg = 0;
         if (sideA + sideB < sideC || sideB + sideC < sideA || sideA + sideC < sideB) {
             System.out.println("треугольник не существует");
         } else {
-            if (sideA > sideB & sideA > sideC) {
-                System.out.println("Гипотенуза: " + sideA + ". Катеты: " + sideB + ", " + sideC +"\n" + "Площадь равна " + (double) (sideB * sideC) / 2);
-            } else if (sideB > sideA & sideB > sideC) {
-                System.out.println("Гипотенуза: " + sideB + ". Катеты: " + sideA + ", " + sideC +"\n" + "Площадь равна " + (double) (sideA * sideC) / 2);
+            if (sideA > sideB && sideA > sideC) {
+                hypotenuse = sideA;
+                firstLeg = sideB;
+                secondLeg = sideC;
+            } else if (sideB > sideA && sideB > sideC) {
+                hypotenuse = sideB;
+                firstLeg = sideA;
+                secondLeg = sideC;
             } else {
-                System.out.println("Гипотенуза: " + sideC + ". Катеты: " + sideA + ", " + sideB +"\n" + "Площадь равна " + (double) (sideA * sideB) / 2);
+                hypotenuse = sideC;
+                firstLeg = sideA;
+                secondLeg = sideB;
             }
         }
-        System.out.println("|\\" + "\n" + "| \\" + "\n" + "|  \\" + "\n" + "|___\\" + "\n");
+        System.out.println("Гипотенуза: " + hypotenuse + ". Катеты: " + firstLeg + ", " + secondLeg +"\n" + "Площадь равна " + (double) (firstLeg * secondLeg) / 2 + "\n" + "|\\" + "\n" + "| \\" + "\n" + "|  \\" + "\n" + "|___\\" + "\n");
 
         //Подсчет количества банкнот
         System.out.println("Подсчет количества банкнот");
