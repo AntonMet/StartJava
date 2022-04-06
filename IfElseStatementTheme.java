@@ -73,17 +73,14 @@ class IfElseStatementTheme {
         //Определение буквы, числа или символа по их коду
         System.out.println("Определение буквы, числа или символа по их коду");
         char unknownChar = '\u005A';
-        if (unknownChar <= '\u0030' | (unknownChar > '\u0039' & unknownChar < '\u0041') | (unknownChar > '\u005A' & unknownChar < '\u0061') | (unknownChar > '\u007A')) {
-            System.out.println(unknownChar + " не буква и не цифра" + "\n");
-        }
-        if (unknownChar > '\u002F' & unknownChar < '\u003A') {
+        if (unknownChar > '\u002F' && unknownChar < '\u003A') {
             System.out.println(unknownChar + " цифра");
-        }
-        if (unknownChar > '\u0040' & unknownChar < '\u005B') {
+        }else if (unknownChar > '\u0040' && unknownChar < '\u005B') {
             System.out.println(unknownChar + " заглавная буква" + "\n");
-        }
-        if (unknownChar > '\u0060' & unknownChar < '\u007B') {
+        } else if (unknownChar > '\u0060' && unknownChar < '\u007B') {
             System.out.println(unknownChar + " строчная буква" + "\n");
+        } else {
+            System.out.println(unknownChar + " не буква и не цифра" + "\n");
         }
 
         //Определение суммы вклада и начисленных банком %
@@ -164,7 +161,8 @@ class IfElseStatementTheme {
                 secondLeg = sideB;
             }
         }
-        System.out.println("Гипотенуза: " + hypotenuse + ". Катеты: " + firstLeg + ", " + secondLeg +"\n" + "Площадь равна " + (double) (firstLeg * secondLeg) / 2 + "\n" + "|\\" + "\n" + "| \\" + "\n" + "|  \\" + "\n" + "|___\\" + "\n");
+        System.out.println("Гипотенуза: " + hypotenuse + ". Катеты: " + firstLeg + ", " + secondLeg +"\n" + "Площадь равна " + (double) (firstLeg * secondLeg) / 2);
+        System.out.println("|\\" + "\n" + "| \\" + "\n" + "|  \\" + "\n" + "|___\\" + "\n");
 
         //Подсчет количества банкнот
         System.out.println("Подсчет количества банкнот");
