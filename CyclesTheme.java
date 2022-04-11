@@ -69,5 +69,79 @@ class CyclesTheme {
         for(; b % 5 != 0; b++) {
             System.out.printf("%4d", 0);
         }
+        System.out.println();
+
+        //Проверка количества единиц на четность
+        a = 3141591;
+        b = 0;
+        while (a > 9) {
+            if (a % 10 == 1) {
+                b++;
+            }
+            a = a / 10;
+        }
+        if(b % 2 == 0) {
+            System.out.println ("Количество единиц четное: " + b);
+        } else {
+            System.out.println ("Количество единиц нечетное: " + b);
+        }
+
+        //Отображение фигур в консоли
+        for(a = 0; a < 5; a++) {
+            for(b = 0; b < 10; b++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        a = 0;
+        b = 0;
+        c = 5;
+        while (b < 5) {
+            while (a < c) {
+                a++;
+                System.out.print("#");
+            }
+            System.out.println();
+            a = 0;
+            b++;
+            c--;
+        }
+        a = 0;
+        b = 0;
+        c = 1;
+        do {
+            do {
+                System.out.print("$");
+                a++;
+            } while (a < c);
+            a = 0;
+            b++;
+            c++;
+            System.out.println();
+        } while (b < 3);
+        a = 0;
+        b = 0;
+        c = 2;
+        do {
+            do {
+                System.out.print("$");
+                a++;
+            } while (a < c);
+            a = 0;
+            b++;
+            c--;
+            System.out.println();
+        } while (b < 2);
+        System.out.println();
+
+        //Отображение ASCII-символов
+        for(a = 0; a < 128; a++) {
+            if (a % 2 != 0) {
+                System.out.println((char) a);
+            }
+        }
+
+        //Проверка, является ли число палиндромом
+        a = 12321;
     }
 }
